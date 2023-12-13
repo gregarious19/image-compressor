@@ -1,6 +1,7 @@
 const express = require("express");
 const multer = require("multer");
 const sharp = require("sharp");
+const cors = require("cors");
 
 const app = express();
 const port = process.env.PORT || 3001;
@@ -8,6 +9,7 @@ const port = process.env.PORT || 3001;
 app.use(express.static("public"));
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
+app.use(cors());
 
 const storage = multer.memoryStorage();
 const upload = multer({ storage: storage });
