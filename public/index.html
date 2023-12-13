@@ -1,0 +1,38 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SharCorp Compressed</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="container">
+      <img src="logo.png" alt="SharCorp Logo" class="logo" />
+
+      <div class="card">
+        <h1>Compress Image</h1>
+        <div class="options">
+          <label for="width">Width:</label>
+          <input type="number" id="width" placeholder="Enter width" />
+          <label for="height">Height:</label>
+          <input type="number" id="height" placeholder="Enter height" />
+          <label for="size">Size (KB):</label>
+          <input type="number" id="size" placeholder="Enter size" />
+        </div>
+        <input type="file" id="fileInput" accept=".jpg, .jpeg, .png" />
+        <button id="compressBtn">Compress</button>
+        <a id="downloadLink" style="display: none" download
+          >Download Compressed Image</a
+        >
+        <img
+          id="compressedImage"
+          alt="Compressed Image"
+          style="display: none"
+        />
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
